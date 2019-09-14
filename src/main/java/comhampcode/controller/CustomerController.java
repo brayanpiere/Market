@@ -30,7 +30,7 @@ public class CustomerController {
 		return "index";
 	}
 	
-	@PostMapping("/new")
+	@GetMapping("/new")
 	public String newCustomer(Model model) {
 		model.addAttribute("customer", new Customer());
 		return "customer";
@@ -45,7 +45,7 @@ public class CustomerController {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		return "redirect/customers/list";
+		return "redirect:/customers/list";
 	}
 	
 

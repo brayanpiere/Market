@@ -14,10 +14,10 @@ public interface CustomerRepositoty extends JpaRepository<Customer, Long>{
 	
 	Optional<Customer> findByDni(String dni);
 	
-	@Query("SELECT c FROM Customer c WEHRE c.dni=?1")
+	@Query("SELECT c FROM Customer c WHERE c.dni=?1")
 	List<Customer> gerByDni(String dni);
 	
-	@Query(value="SELECT c FROM Customer c WEHRE c.dni=?1", nativeQuery= true)
+	@Query(value="SELECT c FROM Customer c WHERE c.dni=?1", nativeQuery= true)
 	List<Customer> fetchByDni(String dni);
 
 }
